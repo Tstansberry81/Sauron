@@ -1,0 +1,10 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# NOTE: sauron_data.js IS committed on purpose — it's the data the static site
+# serves. Regenerate it with export_sauron.py (in the Edge repo) and commit the
+# update to publish fresh picks.

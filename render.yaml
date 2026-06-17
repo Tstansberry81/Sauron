@@ -1,0 +1,14 @@
+# Render Blueprint — Sauron is a pure static site (HTML + one generated JS file).
+# Create it on Render via "New +" -> "Blueprint" and point at this repo, or set up
+# a Static Site manually with Publish Directory "." and an empty build command.
+services:
+  - type: web
+    name: sauron
+    runtime: static
+    buildCommand: "echo 'static site — no build step'"
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
